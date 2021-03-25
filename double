@@ -1,0 +1,36 @@
+import re
+
+def countDouble(test):
+    '''
+    Double
+    Verifica las declaraciones double del lenguaje Java en su version 8.
+    '''
+    esArreglo=False
+    totIni=0
+    totDec=0
+    tst=test.replace(" ", "")
+    tst=test.replace(";", "")
+    try:
+        tst=tst.replace("double", "")
+        tst=tst.replace(";", "")
+        if(tst[:2]=='[]' or tst[-2:]=='[]'):
+            esArreglo=True
+            tst=tst.replace("[]", "")
+            p = re.findall(r'{(.*)}', tst)
+            p=p[0].split(",")
+            for x in p:
+                float(x)
+                tst=re.sub('{.+?}', '1', tst)
+        totIni=CuentaIni(tst)
+        totDec=CuentaDec(tst)
+    except:
+        esArreglo=False
+        totIni=0
+        totDec=-1
+    
+    print("Hay declaraciones de variables tipo double")
+    print(esArreglo)
+    print("Todas las instancias de double inicializadas:")
+    print(totIni+totDec)
+    print("Todas las instancias de double declaradas:")
+    print(totDec)
