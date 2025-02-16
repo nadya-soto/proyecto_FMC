@@ -11,7 +11,9 @@ This project aims to detect and list uninitialized variables in source code file
 ---
 
 ## 📂 Project Structure
-- **`codigo_analisis.py`** → Main script for variable analysis
+- **`Proyecto1.ipynb`** 
+- **`Proyecto2.ipynb`** 
+- **`ProyectoFMC.ipynb`** → Main script for variable analysis
 - **`Ejemplo.txt`** → Text file containing the source code to analyze
 - **`README.md`** → Project documentation
 
